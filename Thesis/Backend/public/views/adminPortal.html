@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to adAppt</title>
+    <style>
+      #preview img {
+        border: 1px solid black;
+        float: left;
+        margin: 0 1em 1em 0;
+        width: 10em;
+      }
+    </style>
+  </head>
+  <div>
+  </div>
+  <form id="claimsQR">
+  <body>
+    This credentials Portal is created to be accessed as administrator entity in the network. This credentials portal will be 
+    improved and made colorful in Future, So the admin can add or remove credentials with a UI
+    <br>
+    =========================================================================================================================================
+    <div id="claims"></div>
+    <ul>
+    <% for(var data of data)
+      {   %>
+        <li>
+            <div>
+            <% if(data.claimId && !data.preReqs) { %>
+              Claim Name: <%= data.claimName %></br>
+              Claim Id: <%= JSON.stringify(data.claimId) %></br>
+              Pre Reqs: No Pre Reqs
+              <br>
+              <img src="/images/claims/<%= data.claimName %>.png" alt=""> </img>
+              <br>
+              _______________________________________________________________________________________________________________________________________________
+           <% }
+            else { %>
+              <br>
+              <br>
+              Claim: <%= data.claimName %></br>
+              Claim Id: <%= JSON.stringify(data.claimId) %></br>
+              Pre Reqs: <%= JSON.stringify(data.preReqs) %>
+              <br>
+              <img src="/images/claims/<%= data.claimName %>.png" alt=""> </img>
+              <br>
+              _______________________________________________________________________________________________________________________________________________
+            <%} %>
+            </div>
+        </li>
+      <%} %>
+    </ul>
+    </script>
+  </body>
+  </form>
+</html>

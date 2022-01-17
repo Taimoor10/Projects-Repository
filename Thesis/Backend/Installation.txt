@@ -1,0 +1,68 @@
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+All the commands and configuration mentioned are only for this project named "Thesis"
+This file contains the steps required to download and configure parity and launch a blockchain node for the local 
+machine. Morever It also provide commands to install and configure Rust and Truffle environment
+
+/Note: The configuration is only for macOS. Configuration for windows or any other operating system is not 
+       included
+
+In case of any questions or queries. contact me at:
+   => Email: "muhammad.taimoor@informatik.hs-fulda.de",
+   => Phone_No: (+49) 177 4035681
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+Pre-Requisites:
+=================================================================================================================================
+
+    # Make sure that Node is installed and configured for the system. This project requires node to run
+
+      See docs "https://nodejs.org/en/download/package-manager/#macos" for more details
+
+    # Make sure that all the modules are installed. In case of module missing from package.json:
+      => run "npm install" from the project's root directory
+      or
+      => run "npm install [name_of_the_missing_module]" from the project's root directory (Example: npm install 
+         web3@1.2.1)
+      
+=================================================================================================================================
+
+
+Steps for Installation and Configuration:
+=================================================================================================================================
+
+// 1) Rust Environment
+
+   => run "curl https://sh.rustup.rs -sSf | sh" in terminal to grab rust and proceed with installation
+
+/Note: See docs "https://openethereum.github.io/wiki/Setup#one-line-binary-installer" for more details
+
+==================================================================================================================================
+// 2) Parity Node and Truffle
+
+=> Download parity Ethereum v2.7.2-stable binary from the provided link for macOS environment with Architecture x64:
+  
+   Link: "https://github.com/openethereum/openethereum/releases/tag/v2.7.2"
+
+=> Run binary file "installParity" included in the project directory. This will configure the parity's 
+   binary and add the path. It will also install Truffle and add its path
+   or
+   Alternatively, copy the downloaded binary and paste it in "/usr/local/bin" folder on the system
+
+   => Command 1: "cd /usr/local/bin" in terminal and then "open ." to access the folder and paste the binary
+   => Command 2: "npm install -g truffle@5.1.20" to install truffle
+
+/Note: 
+See docs "https://openethereum.github.io/wiki/Setup#one-line-binary-installer" for parity installation details
+See docs "https://www.trufflesuite.com/docs/truffle/getting-started/installation" for truffle installation details
+
+==================================================================================================================================
+// 3) Install nodemon
+
+=> Run binary "nodemon" provided in project folder.
+   or
+   Alternatively type the following command in terminal
+
+   => Command: "npm install -g nodemon"
+
+==================================================================================================================================

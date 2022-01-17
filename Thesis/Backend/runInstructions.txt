@@ -1,0 +1,71 @@
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+All the commands and configuration mentioned are only for this project named "Thesis"
+This file contains the steps required to launch a parity node, deploy contract and launch the administrative Node 
+server
+
+/Note: The configuration is only for macOS. Configuration for windows or any other operating system is not 
+       included
+
+In case of any questions or queries. contact me at:
+   => Email: "muhammad.taimoor@informatik.hs-fulda.de",
+   => Phone_No: (+49) 177 4035681
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+Steps :
+=================================================================================================================================
+// 1) Parity Node
+
+=> Run "parityLaunch" binary provided in project folder to start parity node. Keep the terminal running
+   or
+   Alternatively type the following command in terminal to launch parity node
+
+   Command: "parity --config dev --jsonrpc-apis all --allow-ips private --jsonrpc-cors all --tracing on"
+
+/Note: In case of error or issues, check if there are other instances of parity are running already
+
+=================================================================================================================================
+/*Important: Deploying the smart contracts results in change every time. All the data will be reset and removed 
+             which have to be entered again.
+             Smart contracts are not meant to be deployed again and again. However, for demonstration purpose 
+             use the instructions to deploy contracts and provided scripts in project's directory to enter data.
+
+// 2) Deploy Smart Contracts
+
+=> Run "deployContracts" binary provided in project folder to compile and deploy contracts
+   or
+   Alternatively type the following commands in terminal from the project's root directory to compile and deploy contracts
+   
+   /Note: Execute the commands in the order as they are mentioned
+
+    => Command 1: "truffle compile"     // compiles the contract and generates ABIs
+    => Command 2: "node deploy.js"      // deploy the smart contract to Ethereum blockchain 
+
+/Note: The error "Error: Invalid JSON RPC response: """ results in the failed connection with parity's Node. It 
+indicates that parity node is not running. So launch parity node as mentioned in step 1)
+
+=================================================================================================================================
+// 3) Start Node Server
+
+=> Type  "nodemon app.js" in terminal from project's root directory to start the node server
+   or
+   Type "nodemon [path_of_the_project] app.js" in terminal
+
+/Note: The Error "connection not open on send()" indicates that the parity node is not running. Launch the parity 
+       node and perform this step again
+
+=================================================================================================================================
+// 4) View Credentials
+
+=> The route "http://localhost:3000/user/credentialsQR" is supposed to be controlled by administrator, hence you can see all the
+   credentials listed there
+
+=> The route "http://localhost:3000/user/qrCode" is created to demonstrate the login functionality for a user to get into credentials
+   portal. This route require user to be registered to redirect to credentials portal
+
+=================================================================================================================================
+//  5) Add Credentials
+
+=> Run "addData" binary file provided in project's folder to add pre-configured credentials in smart contracts
+   or
+   Use "curlCommands.txt" file provided in project's folder to add data accordingly. It includes all the commands

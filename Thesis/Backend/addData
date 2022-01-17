@@ -1,0 +1,100 @@
+#This commands add an issuer in the network
+
+curl --location --max-time 20000 --request POST 'http://localhost:3000/identity/addIssuer' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+	"address": "9a10bfa1cfe327b36a647a29ee8fe957691d2d8d"
+}'
+
+
+#Adds Claim City Credential
+
+curl --location --max-time 20000 --request POST 'http://localhost:3000/identity/addClaim' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+	"claimName": "Claim City",
+	"claimType": 3,
+	"scheme" : 2,
+	"issuer" : "9a10bfa1cfe327b36a647a29ee8fe957691d2d8d",
+	"data": {"status":"authorized", "id":"1234", "valid till":"23rd August"},
+	"uri": "www.Claim City.com",
+	"issuerName": "Claim City"
+}'
+
+
+#Adds a BMW credential
+
+curl --location --max-time 20000 --request POST 'http://localhost:3000/identity/addClaim' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+	"claimName": "BMW",
+	"claimType": 1,
+	"scheme" : 5,
+	"issuer" : "9a10bfa1cfe327b36a647a29ee8fe957691d2d8d",
+	"data": {"status":"issued"},
+	"uri": "www.BMW.com",
+	"issuerName": "BMW"
+}'
+
+
+#Adds Hochschule Card Credential
+
+curl --location --max-time 20000 --request POST 'http://localhost:3000/identity/addClaim' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+	"claimName": "Hochschule Card",
+	"claimType": 2,
+	"scheme" : 5,
+	"issuer" : "9a10bfa1cfe327b36a647a29ee8fe957691d2d8d",
+	"data": {"status":"student", "degree":"Masters", "semester":"4"},
+	"uri": "www.Hochschule card.com",
+	"issuerName": "Hochschule Fulda"
+}'
+
+
+#Adds Masters degree Credential
+
+curl --location --max-time 20000 --request POST 'http://localhost:3000/identity/addClaim' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+	"claimName": "Masters degree",
+	"claimType": 2,
+	"scheme" : 3,
+	"issuer" : "9a10bfa1cfe327b36a647a29ee8fe957691d2d8d",
+	"data": {"status":"issued", "GPA":"2.4"},
+	"uri": "www.Hochschule.com",
+	"issuerName": "Hochschule Fulda"
+}'
+
+
+#Adds Claim City pre-requisite to Hochschule Card
+
+curl --location --max-time 20000 --request POST 'http://localhost:3000/identity/addPreRequisite' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+	"claimId": "0xc60435ebfd1d30b5b311a49ab4c5b186a9860293a359560b799a03f359f919f0",
+	"preReqId" : "0x3a2b1d933a3c8169405264e5275af8afdd59e727be2dc157dc604b93dc960ff7"
+	
+}'
+
+
+#Adds Claim City and Hochschule Card pre-requisite to Masters degree
+
+
+curl --location --max-time 20000 --request POST 'http://localhost:3000/identity/addPreRequisite' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+	"claimId": "0x1490807840cf8d25d04b8e5f24a3cd0a957031518b7965eabca7f7e71276d6fa",
+	"preReqId" : "0xc60435ebfd1d30b5b311a49ab4c5b186a9860293a359560b799a03f359f919f0"
+	
+}'
+
+
+curl --location --max-time 20000 --request POST 'http://localhost:3000/identity/addPreRequisite' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+	"claimId": "0x1490807840cf8d25d04b8e5f24a3cd0a957031518b7965eabca7f7e71276d6fa",
+	"preReqId" : "0x3a2b1d933a3c8169405264e5275af8afdd59e727be2dc157dc604b93dc960ff7"
+}'
+
+

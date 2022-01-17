@@ -1,0 +1,1 @@
+{"_events":{},"_eventsCount":3,"_connections":0,"_handle":null,"_usingWorkers":false,"_workers":[],"_unref":false,"allowHalfOpen":true,"pauseOnConnect":false,"httpAllowHalfOpen":false,"timeout":0,"keepAliveTimeout":5000,"maxHeadersCount":null,"headersTimeout":60000}

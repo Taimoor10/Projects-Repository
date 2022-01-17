@@ -1,0 +1,9 @@
+BASEDIR=$(dirname "$0")
+echo "$BASEDIR"
+cd "$BASEDIR"
+
+truffle compile
+
+node deploy.js
+
+kill $(lsof -ti:3000)

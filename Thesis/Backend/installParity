@@ -1,0 +1,7 @@
+username=$(id -un)
+
+mv /Users/"$username"/Downloads/parity /usr/local/bin
+
+chmod +x /usr/local/bin/parity
+
+npm install -g truffle@5.1.20

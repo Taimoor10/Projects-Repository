@@ -1,0 +1,123 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+This file provides the list of important curl commands to interact with Node server and store information 
+(credentials, claim issuers)
+
+/Note: The configuration is only for macOS. Configuration for windows or any other operating system is not 
+       included
+
+In case of any questions or queries. contact me at:
+   => Email: "muhammad.taimoor@informatik.hs-fulda.de",
+   => Phone_No: (+49) 177 4035681
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+%%%%%%CURL COMMANDS%%%%%%%%s
+================================================================================================================
+#Check the existence of user in Smart Contract. Enter the username in "username" field and remove the brackets.
+ See the Node server terminal for output
+
+ => Curl Command: 
+	curl --location --max-time 20000 --request POST 'http://localhost:3000/user/isUser' \
+	--header 'Content-Type: application/json' \--data-raw '{
+	"username" : "[ENTER_USERNAME]"
+	}'
+
+
+=================================================================================================================
+#Adds a Claim Issuer in the network. Replace the address with Claim Issuer address to add another Issuer.
+ 
+
+ **Note: Same claim issuer cannot be added into the network and will result in Sever exception**
+
+ => Curl Command:
+	curl --location --max-time 20000 --request POST 'http://localhost:3000/identity/addIssuer' \
+	--header 'Content-Type: application/json' \--data-raw '{
+	"address": "9a10bfa1cfe327b36a647a29ee8fe957691d2d8d"
+	}'
+
+
+==================================================================================================================
+#Check the existence of a Claim Issuer in the network. Replace "address" with Claim issuer's address. See the
+ Node server terminal for output
+ 
+ **Note: Provide a valid Claim issuer address. Providing an invalid address will result in Server side exception**
+
+ => Curl Command:
+	curl --location --max-time 20000 --request POST 'http://localhost:3000/identity/isIssuer' \
+	--header 'Content-Type: application/json' \--data-raw '{
+	"address": "9a10bfa1cfe327b36a647a29ee8fe957691d2d8d"
+	}'
+
+
+==================================================================================================================
+#Adds a claim by registered claim Issuer in the network. Replace "claimName", "claimType", "scheme", "issuer",
+ "data", "uri" and "issuerName". Insert customised key-value pair in "data" according to the requirement
+
+  **Note: A claim with same name cannot be entered twice and will result in Server side exception**
+
+ => Curl Command:
+	curl --location --max-time 20000 --request POST 'http://localhost:3000/identity/addClaim' \
+	--header 'Content-Type: application/json' \
+	--data-raw '{
+	"claimName": "Claim City",
+	"claimType": 2,
+	"scheme" : 3,
+	"issuer" : "9a10bfa1cfe327b36a647a29ee8fe957691d2d8d",
+	"data": {"status":"issued", "GPA":"2.4"},
+	"uri": "www.Hochschule.com",
+	"issuerName": "Hochschule Fulda"
+	}'
+
+
+==================================================================================================================
+#Adds a pre-requisite claim to a claim. Replace "claimId" with claim's Id and "preReqId" with an id of claim to 
+ be added as pre-requisite
+
+ => Curl Command:
+	curl --location --max-time 20000 --request POST 'http://localhost:3000/identity/addPreRequisite' \
+	--header 'Content-Type: application/json' \--data-raw '{
+	"claimId": "0x9ceca249ad2ea063cb73c46f9d4cfcacaa6822a8117d9333252101f8728201f6",
+	"preReqId" : "0xda9c023d8635369287fbc8a2bee84bcdabf91accee6af7ec4c52b79e3ed5077d"
+	}'
+
+
+==================================================================================================================
+#Get Pre-Requisite claims Id linked to a claim. See the terminal of Node server for output
+
+ => Curl Command:
+	curl --location --max-time 20000 --request POST 'http://localhost:3000/identity/getPreRequisites' \
+        --header 'Content-Type: application/json' \--data-raw '{
+	"claimId": "0x9ceca249ad2ea063cb73c46f9d4cfcacaa6822a8117d9333252101f8728201f6"
+	}'
+
+===================================================================================================================
+#Get Claim Information of a particular claim. Replace "claimId" with claimId. See the terminal of Node server 
+ for output
+
+ => Curl Command:
+	curl --location --max-time 20000 --request POST 'http://localhost:3000/identity/getClaim' \
+	--header 'Content-Type: application/json' \
+	--data-raw '{
+	"claimId": "0xc60435ebfd1d30b5b311a49ab4c5b186a9860293a359560b799a03f359f919f0"
+	}'
+
+====================================================================================================================
+#Remove Claim from the Server. Replace "claimId" and "claimName" carefully with respective claimId and claimName.
+
+ /*Important: The claim does not get implicitly deleted from other claims added as a pre-requisite. The other claims 
+  containing the deleted claims as pre-requisites also have to be explicitly deleted and then added again to 
+  keep the smart contracts and Node Server consistent.
+
+ => Curl Command:
+	curl --location --max-time 20000 --request POST 'http://localhost:3000/identity/removeClaim' \
+	--header 'Content-Type: application/json' \--data-raw '{
+	"claimId": "0x3a2b1d933a3c8169405264e5275af8afdd59e727be2dc157dc604b93dc960ff7",
+	"claimName": "Claim City"
+	}'
+
+====================================================================================================================
+
+
+

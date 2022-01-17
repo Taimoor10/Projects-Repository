@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to adAppt</title>
+    <style>
+      #preview img {
+        border: 1px solid black;
+        float: left;
+        margin: 0 1em 1em 0;
+        width: 10em;
+      }
+    </style>
+  </head>
+  <div>
+  </div>
+  <form id="claimsQR">
+  <body>
+    <div>
+      <b>This Credentials Portal is only Created for Demonstration Purpose. This portal comes with a default configuration
+        after running the script "addData" provided in project folder. This credentials portal will be improved and made 
+        colorful in Future. 
+        Meanwhile use this credentials portal to scan claims precisely. Make sure to get pre-requisite claims before scanning
+        the claim.</b>
+        <br>
+        =========================================================================================================================================
+    </div>
+    <div id="claims" style="align-content: center; align-self: center; align-items:center;">
+    <ul style="align-self: center;">
+      <% for(var data of data)
+      {   %>
+        <li>
+            <div>
+            <% if(data.claimId && !data.preReqs) { %>
+              <br>
+              <br>
+              Claim Name: <b><%= data.claimName %><b></br>
+              Claim Id: <%= JSON.stringify(data.claimId) %></br>
+              Pre Reqs: No Pre Reqs
+              <br>
+              <img src="/images/claims/<%= data.claimName %>.png" alt=""> </img>
+              <br>
+              _______________________________________________________________________________________________________________________________________________
+           <% }
+            else { %>
+              <br>
+              <br>
+              Claim Name: <b><%= data.claimName %><b></br>
+              Claim Id: <%= JSON.stringify(data.claimId) %></br>
+              Pre Reqs: <%= JSON.stringify(data.preReqs) %>
+              <br>
+              <img src="/images/claims/<%= data.claimName %>.png" alt=""> </img>
+              <br>
+              _______________________________________________________________________________________________________________________________________________
+            <%} %>
+            </div>
+        </li>
+      <%} %>
+    </ul>
+  </div>
+    </script>
+  </body>
+  </form>
+</html>

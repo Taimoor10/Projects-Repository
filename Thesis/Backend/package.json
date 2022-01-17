@@ -1,0 +1,31 @@
+{
+  "name": "thesis",
+  "version": "1.0.0",
+  "main": "code.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "ejs": "^3.0.2",
+    "jimp": "^0.10.0",
+    "keccak256": "^1.0.0",
+    "nodemon": "^2.0.6",
+    "qrcode": "^1.4.4",
+    "qrcode-reader": "^1.0.4",
+    "socket.io": "^2.3.0",
+    "socket.io-client": "^2.3.0",
+    "tweetnacl": "^1.0.3",
+    "tweetnacl-util": "^0.15.1",
+    "web3": "^1.2.1"
+  },
+  "devDependencies": {},
+  "directories": {
+    "test": "test"
+  },
+  "description": "",
+  "browser": "ionic-app-scripts serve --sourceMap source-map --iscordovaserve --wwwDir platforms/browser/www/ --buildDir platforms/browser/www/build"
+}

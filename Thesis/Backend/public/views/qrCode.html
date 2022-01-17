@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>QR Test</title>
+    <style>
+      #preview img {
+        border: 1px solid black;
+        float: left;
+        margin: 0 1em 1em 0;
+        width: 10em;
+      }
+    </style>
+  </head>
+  <form id="QRcode">
+  <body>
+    <div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript">
+      let data = "<%= data %>";
+      console.log("<%= data%>")
+      document.write("Scan this QR Code to Login to credentials portal")
+      //document.write(data)
+
+      const socket = //io.connect('http://192.168.128.67:3000', {'forceNew': true})
+      io.connect('http://localhost:3000', {'forceNew':true}) 
+      socket.on('news', (data) => {
+        console.log(data)
+      });
+      
+      socket.on('signed', (data) => {
+        if(data)
+        {
+          console.log("Data",data)
+          window.location.replace('http://localhost:3000/user/claimsQR')
+          //window.location.replace('http://192.168.128.67:3000/user/claimsQR')
+          socket.emit('terminate')
+        }
+      });
+
+      socket.on('unsigned', (data) => {
+        if(data)
+        {
+          document.write(data)
+          socket.emit('terminate')
+        }
+      });
+      
+    </script>
+    </div>
+    <div>
+      <img src="/images/image.png"></img>
+    </div>
+  </body>
+  </form>
+</html>
