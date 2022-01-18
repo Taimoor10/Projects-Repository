@@ -1,7 +1,7 @@
 ## Steps for Installation and Configuration:
 
 1. Node and Expo-CLI installation
-   -  Run **setup** binary file provided in the project folder to install both `node v14.6.0` and `expo-cli v3.22.3``
+   -  Run **setup** binary file provided in the project folder to install both `node v14.6.0` and `expo-cli v3.22.3`
 
    - See [docs](https://nodejs.org/en/download/package-manager/#macos) for node installation details
    - See [docs](https://docs.expo.io/workflow/expo-cli/) for expo-cli installation details
