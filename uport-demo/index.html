@@ -1,0 +1,41 @@
+<!-- Simple HTML for creating, attesting and verifying credentials by scanning QR code-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Uport Login Functionality</title>
+</head>
+
+<body>
+<form action="https://uportapp12.herokuapp.com/login" method="get">
+	<div class="container">
+		<label for="User ID"><b>Sign In</b></label>
+		<button type="submit">Login</button>
+	</div> 
+</form>
+<br>
+<br>
+<form action="https://uportapp12.herokuapp.com/verify" method="get">
+	<div class="container">
+		<label for="verify"><b>Verification</b></label>
+		<button type="submit">Verify</button>
+	</div>
+</form>
+<br>
+<br>
+<form action="https://uportapp12.herokuapp.com/requestverify" method="get">
+	<div class="container">
+		<label for="requestverify"><b>Request Verify</b></label>
+		<button type="submit">Request Verification</button>
+	</div>
+</form>
+<br>
+<br>
+<form action="https://uportapp12.herokuapp.com/sendtransaction" method="get">
+	<div class="container">
+		<label for="sendtransaction"><b>Send Transaction</b></label>
+		<button type="submit">Send Transaction</button>
+	</div>
+</form>
+</body>
+</html>
