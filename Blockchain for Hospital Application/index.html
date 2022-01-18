@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blockchain</title>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+$(document).ready(function() {
+         var socket = io.connect('http://0.0.0.0:8000/test');
+         var socket2 = io.connect('http://0.0.0.0:8000/clients')
+
+         socket.on('connect', function(){
+            console.log("Socket 1 is connected")
+            socket.emit('my event', {data: 'Socket 1 is connected!'});
+         });
+
+         socket2.on('connect', function(){
+            console.log("Socket 2 is connected")
+            socket.emit('my event', {data: 'Socket 2 is connected!'});
+         });
+
+
+         socket.on('my event', function(msg) {
+            $('#messages').append('<li>'+msg+'</li>');
+            console.log('Received Message:' + msg );
+         });
+
+         $('#send').on('click', function(msg) {
+            socket.emit('myevent',  $('#mymsg').val());
+            $('#mymsg').val('');
+         });
+
+         $('#jsonsend').on('click', function(msg) {
+            socket2.emit('txevent',  {'From':$('#from').val() , 'To':$('#To').val() , 'Amount':$('#amount').val()});
+            $('#from').val('');
+            $('#To').val('');
+            $('#amount').val('');
+         });
+
+         $('#savefile').on('click', function(msg) {
+            socket2.emit('savechain');
+         });
+
+         socket2.on('getreply', function(msg) {
+            $('#messages').append('<li>'+msg+'</li>');
+            console.log('File saved' );
+         });
+
+         socket2.on('gettx', function(msg) {
+            $('#messages').append('<li>'+msg+'</li>');
+            console.log('Received TX Message:' + msg );
+         });
+});
+
+</script>
+<ul id="messages"></ul>
+<input type="text" placeholder="Text" id="mymsg">
+<input type="text" placeholder="From" id="from">
+<input type="text" placeholder="To" id="To">
+<input type="text" placeholder="Amount" id="amount">
+<button id=send> Send </button>
+<button id=jsonsend> Send Transaction</button>
+<button id=savefile>Save Blockchain</button>
+</body>
+</html>
