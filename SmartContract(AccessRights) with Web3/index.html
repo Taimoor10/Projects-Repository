@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Contract</title>
+</head>
+<body>
+
+<form action="http://127.0.0.1:8080/GrantResourceAccess" method="post">
+  <div class="container">
+    <label><b>Grant Access to a Resource</b></label>
+    <br>
+    <label for="fromaddress"><b>From Address</b></label>
+    <input type="text" placeholder="From Address" name="fromaddress" required>
+
+    <label for="toaddress"><b>To Address</b></label>
+    <input type="text" placeholder="To Address" name="toaddress" required>
+
+    <label for="resourceid"><b>Resource Id</b></label>
+    <input type="text" placeholder="Resource Id" name="resourceid" required>
+
+    <label for="buyeraddress"><b>Buyer Address</b></label>
+    <input type="text" placeholder="Buyer Address" name="buyeraddress" required>
+
+    <label for="ethervalue"><b>Ether Value</b></label>
+    <input type="text" placeholder="Ether Value" name="ethervalue" required>
+
+    <label for="gaslimit"><b>Gas Limit</b></label>
+    <input type="text" placeholder="Gas Limit" name="gaslimit" required>
+
+    <label for="gasprice"><b>Gas Price</b></label>
+    <input type="text" placeholder="Gas Price" name="gasprice" required>
+
+    <button type="submit">Send Transaction</button>
+    <button type="button" class="cancelbtn">Cancel</button>
+  </div>
+  <div class="container" style="background-color:#f1f1f1">
+  </div>
+</form>
+<br>
+<br>
+<br>
+<form action="http://127.0.0.1:8080/GrantPurchaseRights" method="post">
+  <div class="container">
+    <label><b>Grant Purchase Rights</b></label>
+    <br>
+    <label for="fromaddress"><b>From Address</b></label>
+    <input type="text" placeholder="From Address" name="fromaddress" required>
+
+    <label for="toaddress"><b>To Address</b></label>
+    <input type="text" placeholder="To Address" name="toaddress" required>
+
+    <label for="resourceid"><b>Resource Id</b></label>
+    <input type="text" placeholder="Resource Id" name="resourceid" required>
+
+    <label for="buyeraddress"><b>Buyer Address</b></label>
+    <input type="text" placeholder="Buyer Address" name="buyeraddress"required>
+
+    <label for="ethervalue"><b>Ether Value</b></label>
+    <input type="text" placeholder="Ether Value" name="ethervalue" required>
+
+    <label for="gaslimit"><b>Gas Limit</b></label>
+    <input type="text" placeholder="Gas Limit" name="gaslimit" required>
+
+    <label for="gasprice"><b>Gas Price</b></label>
+    <input type="text" placeholder="Gas Price" name="gasprice" required>
+
+    <button type="submit">Send Transaction</button>
+    <button type="button" class="cancelbtn">Cancel</button>
+  </div>
+  <div class="container" style="background-color: #f1f1f1">
+  </div>
+</form>
+<br>
+<br>
+<br>
+<form action="http://127.0.0.1:8080/PurchaseResource" method="post">
+<div class="container">
+  <label><b>Purchase Resource</b></label>
+  <br>
+  <label for="fromaddress"><b>From Address</b></label>
+  <input type="text" placeholder="From Address" name="fromaddress" required>
+
+  <label for="toaddress"><b>To Address</b></label>
+  <input type="text" placeholder="To Address" name="toaddress" required>
+
+  <label for="purchaseresource"><b>Resource Id</b></label>
+  <input type="text" placeholder="Resource Id" name="resourceid" required>
+
+  <label for="ethervalue"><b>Ether Value</b></label>
+  <input type="text" placeholder="Ether Value" name="ethervalue" required>
+
+  <label for="gaslimit"><b>Gas Limit</b></label>
+  <input type="text" placeholder="Gas Limit" name="gaslimit" required>
+
+  <label for="gasprice"><b>Gas Price</b></label>
+  <input type="text" placeholder="Gas Price" name="gasprice" required>
+
+  <button type="submit">Send Transaction</button>
+  <button type="button" class="cancelbtn">Cancel</button>
+</div>
+  <div class="container" style="background-color: #f1f1f1">
+  </div>
+</form>
+<br>
+<br>
+<br>
+<form action="http://127.0.0.1:8080/ApproveResourceAccess" method="post">
+<div>
+ <label><b>Approve Resource Access</b></label>
+ <br>
+ <label for="fromaddress"><b>From Address</b></label>
+ <input type="text" placeholder="From Address" name="fromaddress" required>
+
+ <label for="resourceid"><b>Resource Id</b></label>
+ <input type="text" placeholder="Resource Id" name="resourceid" required>
+
+ <label for="useraddress"><b>User Address</b></label>
+ <input type="text" placeholder="User Address" name="useraddress" required>
+
+ <button type="submit">Send Transaction</button>
+ <div class="container" style="background-color: #f1f1f1">
+ </div>
+</div>
+</form>
+<br>
+<br>
+<br>
+<form action="http://127.0.0.1:8080/ApprovePurchaseRights" method="post">
+<div>
+ <label><b>Approve Purchase Rights</b></label>
+ <br>
+ <label for="fromaddress"><b>From Address</b></label>
+ <input type="text" placeholder="From Address" name="fromaddress" required>
+
+ <label for="resourceid"><b>Resource Id</b></label>
+ <input type="text" placeholder="Resource Id" name="resourceid" required>
+
+ <label for="useraddress"><b>User Address</b></label>
+ <input type="text" placeholder="User Address" name="useraddress" required>
+
+ <button type="submit">Send Transaction</button>
+ <div class="container" style="background-color: #f1f1f1">
+ </div>
+</div>
+</form>
+<br>
+<br>
+<br>
+<form action="http://127.0.0.1:8080/viewbalance" method="get">
+  <div class="container">
+    <label><b>View Overall Balance of Smart Contract</b></label>
+    <br>
+    <label for="viewbalance"><b>View Balance</b></label>
+    <button type="submit">View Balance</button>
+  </div>
+</form>
+<br>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
