@@ -1,0 +1,70 @@
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+All the commands and configuration mentioned are only for this project named "addapt"
+This file contains the steps required to use the front-end application to interact with backend Node server
+
+/Note: The configuration is only for macOS. Configuration for windows or any other operating system is not 
+       included
+
+In case of any questions or queries. contact me at:
+   => Email: "muhammad.taimoor@informatik.hs-fulda.de",
+   => Phone_No: (+49) 177 4035681
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+%%%% 
+Tools Required:
+        i)   Node: v14.6.0,
+        ii)  Expo: v3.22.3,
+        iii) Expo Client: Install the application "Expo Client" from App store for iOS,
+        iv)  npmPackages:
+                 react: ~16.9.0 => 16.9.0 
+                 react-native: https://github.com/expo/react-native/archive/sdk-36.0.0.tar.gz => 0.61.4,
+        v)   react-native-cli: v2.0.1
+%%%%
+
+
+Functionality:
+=================================================================================================================================================
+/*Important: Follow the instructions below in case of a certain issue or warning
+        1) In case of any error or warning as such "disconnected from the Metro server" in application during interaction, touch 3 
+           fingers simultaneously on mobile screen or shake the device to open developer menu. Select "Reload" to restart the application.
+        
+        2) The credentials should be scanned in the heirarchy as they are provided. Scan the pre-requisite claim first to get the child credential.
+         ---Smart contracts still maintain the state even if the credentials are deleted from the application.
+         ---Smart contracts are usually one time deployment and are not required to be deployed again and again.
+            However for demonstration purposes and application usage, if the smart contracts are deployed again. Delete the existing credentials 
+            using "Reset" to reset the application. This also keeps the application consistent with the Node server.
+
+
+// Menu Items:
+
+=> Enter: Press Enter button to get started with the application
+
+
+=> Credentials: The credentials screen shows all the claims scanned from the crdentials portal. It shows valid and expired
+                tabs. However, Expired functionality is not yet implemented but is provided in the application to provide the
+                future idea for Expired claims. 
+                        
+                       => Press on a credential to view details
+                       => A Reset button is also provided in credentials page to delete credentials from the application.
+
+
+=> Menu: Press on the Menu icon on top left or slide finger on your iOS device from left to right to open application menu. 
+         The menu consists of:
+
+        1) Home: button to naviagte to Credentials screen
+        
+        2) Account: Provides the personal information. Press on any field to edit and then press Save to store changes.
+                    /Note: The information provided in this page is required to acquire "Claim City" credential from credentials portal.
+                        The credential is returned including the provided personal information.
+            
+        3) Scan QR Code: ScanQR codes provides multiple functionalities:
+                        => Scan Login QR to login into credentials portal
+                        => Scan Credentials QR code in credentials portal to acquire claims
+
+        4) Setting: Page is under development and unimplemented yet
+
+        5) Create Account: Provide unique usernames to create Ethereum Accounts
+
+=================================================================================================================================================        
+
+                    

@@ -1,0 +1,1 @@
+{"ast":null,"code":"export var claimsBarrSwitcher = 'claimsBarrSwitcher';","map":{"version":3,"sources":["/Users/muhammadtaimoor/Projects/adappt/redux/barSwitch/barSwitcherType.js"],"names":["claimsBarrSwitcher"],"mappings":"AAAA,OAAO,IAAIA,kBAAkB,GAAI,oBAA1B","sourcesContent":["export let claimsBarrSwitcher  = 'claimsBarrSwitcher'\n"]},"metadata":{},"sourceType":"module"}
