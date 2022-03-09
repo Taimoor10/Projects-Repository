@@ -18,6 +18,11 @@ Start the node server:
 node app.js
 ```
 
+For tests:
+```shell
+npx hardhat test
+```
+
 Either use the frontend application or postman to interact with the following routes:
 
 transfer
