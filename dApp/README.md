@@ -1,4 +1,4 @@
-# NFT implementation using Hardhat and Ether.js
+# ERC20 implementation using Hardhat and Ether.js
 
 Clone the project and run the following in terminal to start a node
 
