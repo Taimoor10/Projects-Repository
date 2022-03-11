@@ -217,13 +217,7 @@ router.post('/addClaim', async(req,res)=>{
             return
         }
 
-    // if(poster != issuer)
-    // {
-    //     res.send("Issuer account does not match with provided address")
-    //     console.log("Issuer account does not match with provided address")
-    // }
-    //else
-    //{
+    
         web3.eth.personal.unlockAccount(decryptedAccount.address, "issuer")
         const hashedDatatoSign = web3.utils.soliditySha3(issuer,claimType,claimData)
         const signature = await web3.eth.sign(hashedDatatoSign,decryptedAccount.address)
@@ -334,8 +328,6 @@ router.post('/removeClaim', async(req,res)=>{
     web3.eth.personal.unlockAccount(decryptedAccount.address, "issuer")
 
     let transaction = await transactionObj.createTransactionObject("identity",poster)
-    //let result = await transactionObj.transaction(transaction.contract, transaction.transactionObject,
-        //"removeClaim", params, decryptedAccount.privateKey, decryptedAccount.address)
     
     transaction.transactionObject.nonce = await web3.eth.getTransactionCount(poster)
     transaction.transactionObject.data =  await transaction.contract.methods.removeClaim(params.claimId).encodeABI()
