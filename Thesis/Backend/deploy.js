@@ -13,13 +13,6 @@ async function deploy() {
 
     try{
     const devKey = fs.readFileSync('./Keys/devKey', 'utf8')
-    //const issuer = fs.readFileSync('./Keys/issuer', 'utf8')
-    //const account3 = fs.readFileSync('./Keys/investorManagement', 'utf8')
-    //const account2 = fs.readFileSync('./Keys/token', 'utf8')
-
-    //User contract deploy
-    // let userContractReceipt = await ethUtils.deploy(devKey, "", "",userContract.contractName)
-    // console.log('User Contract Receipt:', userContractReceipt)
     
     //Identity Contract deploy
     let identityConractReceipt =  await ethUtils.deploy(devKey, "", "",identityContract.contractName)
