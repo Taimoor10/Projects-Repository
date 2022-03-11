@@ -75,10 +75,10 @@
            fingers simultaneously on mobile screen or shake the device to open developer menu. Select "Reload" to restart the application.
         
         2) The credentials should be scanned in the heirarchy as they are provided. Scan the pre-requisite claim first to get the child credential.
-         ---Smart contracts still maintain the state even if the credentials are deleted from the application.
-         ---Smart contracts are usually one time deployment and are not required to be deployed again and again.
-            However for demonstration purposes and application usage, if the smart contracts are deployed again. Delete the existing credentials 
-            using "Reset" to reset the application. This also keeps the application consistent with the Node server.
+           Smart contracts still maintain the state even if the credentials are deleted from the application.
+           Smart contracts are usually one time deployment and are not required to be deployed again and again.
+           However for demonstration purposes and application usage, if the smart contracts are deployed again. Delete the existing credentials.. 
+           using "Reset" to reset the application. This also keeps the application consistent with the Node server.
 
 
 ### Menu Items:
@@ -89,12 +89,13 @@
                 tabs. However, Expired functionality is not yet implemented but is provided in the application to provide the
                 future idea for Expired claims. 
                         
-                 1) Press on a credential to view details
-                 2) A Reset button is also provided in credentials page to delete credentials from the application.
+        1) Press on a credential to view details
+        2) A Reset button is also provided in credentials page to delete credentials from the application.
 
 
-   Menu: Press on the Menu icon on top left or slide finger on your iOS device from left to right to open application menu. 
-         The menu consists of
+   Press on the Menu icon on top left or slide finger on your iOS device from left to right to open application menu. 
+         
+         The menu consists of:
 
         1) Home: button to naviagte to Credentials screen
         
