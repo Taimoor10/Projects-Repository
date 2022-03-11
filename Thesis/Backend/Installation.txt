@@ -6,12 +6,6 @@ machine. Morever It also provide commands to install and configure Rust and Truf
 /Note: The configuration is only for macOS. Configuration for windows or any other operating system is not 
        included
 
-In case of any questions or queries. contact me at:
-   => Email: "muhammad.taimoor@informatik.hs-fulda.de",
-   => Phone_No: (+49) 177 4035681
-\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-
-
 Pre-Requisites:
 =================================================================================================================================
 
