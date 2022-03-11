@@ -211,10 +211,6 @@ app.get('/viewbalance', function(req,res) {
 			res.send(contractBalance)
 		})
 	
-	/*mycontract.methods.viewBalance().call().then((result)=> {
-		console.log(result.toNumber())
-		res.send(result)
-	})*/
 })
 
 app.listen(8080, function() {
