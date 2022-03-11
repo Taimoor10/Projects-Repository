@@ -24,19 +24,6 @@ let SideMenuShow = createDrawerNavigator();
 
 export default class SideMenu extends React.Component {
 
-    // Mounted = false
-    // componentWillUnmount()
-    // {
-    //     this.Mounted=true
-    // }
-
-    // componentWillUnmount()
-    // {
-    //     this.setState  = (state,callback)=>{
-    //         return;
-    //     };
-    // }
-
     render() {
         return (
             <SideMenuShow.Navigator initialRouteName='MenuItems'
