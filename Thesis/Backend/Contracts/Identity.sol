@@ -267,7 +267,7 @@ contract Identity is ERC725, ERC735, User
     function removeClaim(bytes32 _claimId) public claimSignerOnly override returns(bool success)
     {
         Claim memory _claim = claims[_claimId];
-        //require(msg.sender == _claim.issuer || keys[msg.sender].purpose == 1 || msg.sender == address(this), "UnAuthorized");
+
 
         uint256 claimIdTypePosition = claimPosition[_claimId];
         delete claimPosition[_claimId];
@@ -288,7 +288,7 @@ contract Identity is ERC725, ERC735, User
     function issueClaim(bytes32 _claimId, bytes32 _username, address _claimer) public claimSignerOnly returns(bool success)
     {
         require(isUser(_username) == true && clients[_username].UserAddress==_claimer, "User is not registered");
-        //require(issuedClaims[_claimId][_claimer] == false, "Claim is already issued");
+        
         if(claimHasPreRequisites[_claimId]==true)
         {
             bytes32[] memory preReqIds = getPreRequisiteIds(_claimId);
@@ -343,9 +343,6 @@ contract Identity is ERC725, ERC735, User
         //Retreive address of data signer
         address recovered = getRecoveredAddress(signature, prefixedHash);
         emit RecoveredAddress(recovered);
-
-        //Hashing Recovered Address(issuer address)
-        //bytes32 hashedAddress = keccak256(abi.encodePacked(recovered));
 
         if(keys[recovered].purpose == 3)
         {
