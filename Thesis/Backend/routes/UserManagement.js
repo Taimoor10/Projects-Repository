@@ -59,8 +59,6 @@ router.post('/createAccount', async(req, res) => {
 
 //signUp route
 router.post('/signUp', async(req, res) => {
-    // let email = req.body.email
-    // let entropy = req.body.password
     
     let email = req.body.email
     let nonceValue = req.body.nonceValue
@@ -114,8 +112,7 @@ router.get('/qrCode', async(req, res) => {
    
     let server = req.socket.server
     let sock = new socketConnect(server)
-    sock.openSocketConnection()
-    //let socket = sock.openSocketConnection()
+    sock.openSocketConnection()    
     var buffer = fs.readFileSync('./public/images/image.png');
 
     let data = ''
@@ -151,8 +148,7 @@ router.get('/claimsQR', async(req,res)=>{
     else
     {
         let data = []
-        fs.readdirSync('./Claims/').forEach(file=>{
-            //data.push(file)
+        fs.readdirSync('./Claims/').forEach(file=>{           
             let content = fs.readFileSync('./Claims/'+file, 'utf8')
             content = JSON.parse(content)
             if(content.preReqs != undefined)
@@ -180,7 +176,7 @@ router.get('/credentialsQR', async(req,res)=>{
 
         let data = []
         fs.readdirSync('./Claims/').forEach(file=>{
-            //data.push(file)
+            
             let content = fs.readFileSync('./Claims/'+file, 'utf8')
             content = JSON.parse(content)
             if(content.preReqs != undefined)
