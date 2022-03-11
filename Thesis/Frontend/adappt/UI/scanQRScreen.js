@@ -19,12 +19,12 @@ import { deleteClaims } from "../schema"
 import * as Urls from '../baseUrl.json'
 
 const axiosObj = axios.create({
-  //baseURL: 'http://172.21.5.27:3000'
+
   baseURL: "http://" + Urls.baseUrl
 });
 
 const verifierRoute = axios.create({
-  //baseURL: 'http://localhost:3001'
+  
   baseURL: "http://" + Urls.verifierUrl
 })
 
@@ -161,9 +161,7 @@ export default class ScanScreen extends React.Component {
                       uri: response.data.uri,
                       issuerName: response.data.issuerName
                     }
-                    //console.log("Fetched Claim Dataaaa:",claimData)
-
-
+                   
                     checkClaimExistance(claimData.claimId).then(claimExist => {
                       if (claimExist.length == 0) {
                         addIssuedClaims(claimData.claimId, claimData.claimName, claimData.data, claimData.issuer, claimData.uri, claimData.issuerName)
