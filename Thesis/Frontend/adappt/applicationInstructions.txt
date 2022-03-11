@@ -5,11 +5,6 @@ This file contains the steps required to use the front-end application to intera
 /Note: The configuration is only for macOS. Configuration for windows or any other operating system is not 
        included
 
-In case of any questions or queries. contact me at:
-   => Email: "muhammad.taimoor@informatik.hs-fulda.de",
-   => Phone_No: (+49) 177 4035681
-\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-
 %%%% 
 Tools Required:
         i)   Node: v14.6.0,
