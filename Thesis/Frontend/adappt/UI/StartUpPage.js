@@ -22,18 +22,6 @@ import { colors } from '../colorFile';
 
 function StartUpPage({ navigation }) {
 
-    // const userAuthentication = LocalAuthentication.authenticateAsync({promptMessage:"Touch", cancelLabel:"Cancel", fallbackLabel:"Use Pin"})
-    //     Promise.resolve(userAuthentication).then((onTouch)=>{
-    //     if(onTouch.success==true)
-    //     {
-    //         let retrievedData = secureStore.getItemAsync("1234")
-
-    //         Promise.resolve(retrievedData).then((retreivedInfo) => {
-    //             console.log("Retreived Info:",retreivedInfo)
-    //         })
-    //     }
-    // })
-
     return (
         <View style={styles.page}>
             <View style={{marginTop: 80, flex: 1, justifyContent: 'center', alignItems: 'center',}}>
