@@ -69,7 +69,7 @@
 
 ## Functionality:
 
-  Follow the instructions below in case of a certain issue or warning
+  Follow the instructions below in case of a certain issue or warning.
   
         1) In case of any error or warning as such "disconnected from the Metro server" in application during interaction, touch 3 
            fingers simultaneously on mobile screen or shake the device to open developer menu. Select "Reload" to restart the application.
@@ -83,9 +83,9 @@
 
 ### Menu Items:
 
-=> Enter: Press Enter button to get started with the application
+   Press Enter button to get started with the application
 
-=> Credentials: The credentials screen shows all the claims scanned from the crdentials portal. It shows valid and expired
+   Credentials: The credentials screen shows all the claims scanned from the crdentials portal. It shows valid and expired
                 tabs. However, Expired functionality is not yet implemented but is provided in the application to provide the
                 future idea for Expired claims. 
                         
@@ -93,8 +93,8 @@
                  2) A Reset button is also provided in credentials page to delete credentials from the application.
 
 
-=> Menu: Press on the Menu icon on top left or slide finger on your iOS device from left to right to open application menu. 
-         The menu consists of:
+   Menu: Press on the Menu icon on top left or slide finger on your iOS device from left to right to open application menu. 
+         The menu consists of
 
         1) Home: button to naviagte to Credentials screen
         
