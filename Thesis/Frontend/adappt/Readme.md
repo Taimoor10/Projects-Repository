@@ -56,13 +56,13 @@
       QR code with camera of your iOS device. A prompt will appear on the device with message "Open in Expo". Tap on the option 
       to proceed. A javascript bundle will start building and application will be launched on device
 
-    /*Important: Keep the device active during this step
+    Keep the device active during this step
 
-    /*Important: Make sure, that the selected connection is Tunnel connection before scanning the QR code. On selecting a Tunnel
+    Make sure, that the selected connection is Tunnel connection before scanning the QR code. On selecting a Tunnel
     connection a message "Tunnel ready" will be shown in the interpreter. If the message is not shown, stop the expo terminal and  
     perform step 2 again
 
-    /*Possible Errors: Sometimes, the bundle gets corrupted during the bilding phase. This could result in error messages like
+    Possible Errors: Sometimes, the bundle gets corrupted during the bilding phase. This could result in error messages like
       "Could not connect to development server". Simply select "ReloadJS" as the option will be suggested on the bottom of mobile 
       device
 
@@ -70,6 +70,7 @@
 ## Functionality:
 
   Follow the instructions below in case of a certain issue or warning
+  
         1) In case of any error or warning as such "disconnected from the Metro server" in application during interaction, touch 3 
            fingers simultaneously on mobile screen or shake the device to open developer menu. Select "Reload" to restart the application.
         
@@ -88,8 +89,8 @@
                 tabs. However, Expired functionality is not yet implemented but is provided in the application to provide the
                 future idea for Expired claims. 
                         
-                       => Press on a credential to view details
-                       => A Reset button is also provided in credentials page to delete credentials from the application.
+                 1) Press on a credential to view details
+                 2) A Reset button is also provided in credentials page to delete credentials from the application.
 
 
 => Menu: Press on the Menu icon on top left or slide finger on your iOS device from left to right to open application menu. 
@@ -102,8 +103,8 @@
                         The credential is returned including the provided personal information.
             
         3) Scan QR Code: ScanQR codes provides multiple functionalities:
-                        => Scan Login QR to login into credentials portal
-                        => Scan Credentials QR code in credentials portal to acquire claims
+                        1) Scan Login QR to login into credentials portal
+                        2) Scan Credentials QR code in credentials portal to acquire claims
 
         4) Setting: Page is under development and unimplemented yet
 
