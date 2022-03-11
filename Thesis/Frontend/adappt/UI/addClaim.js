@@ -41,7 +41,6 @@ export default class AddClaim extends React.Component {
       });
       alert(`Bar code with type ${type} and data ${data} has been scanned!`);
 
-      //fetch('http://192.168.128.112:3000/user/pushData'
       fetch('http://172.21.5.27:3000/identity/issueClaim', {
 
         method: 'POST',
