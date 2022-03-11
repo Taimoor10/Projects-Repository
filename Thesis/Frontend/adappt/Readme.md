@@ -1,3 +1,12 @@
+## Tools Required:
+        i)   Node: v14.6.0,
+        ii)  Expo: v3.22.3,
+        iii) Expo Client: Install the application "Expo Client" from App store for iOS,
+        iv)  npmPackages:
+                 react: ~16.9.0 => 16.9.0 
+                 react-native: https://github.com/expo/react-native/archive/sdk-36.0.0.tar.gz => 0.61.4,
+        v)   react-native-cli: v2.0.1
+
 ## Steps for Installation and Configuration:
 
 1. Node and Expo-CLI installation
