@@ -131,24 +131,6 @@ namespace Testing
             CreateTransaction(new Transaction(null, minerAddress, Reward));
         }
 
-        /*//Add To Database
-        public void AddChainRecordsToDatabase(Block block)
-        {
-            
-            MySqlConnection conn = DatabaseConnection.GetConnection();
-            string query = "INSERT INTO BlockData (blockindex,Timestamp,PreviousHash,Hash,Data) VALUES ('" + block.index + "','" + block.TimeStamp.ToString() + "','" + block.PreviousHash + "','" + block.Hash + "','" + block.Data + "');";
-            try
-            {   MySqlCommand cmd = new MySqlCommand(query);
-                cmd.Connection = conn;
-                int querycheck = cmd.ExecuteNonQuery();
-            }
-            catch(MySqlException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            conn.Close();
-        }*/
-
         //Delete Data from Table
         public void DeleteDataFromTable()
         {
@@ -176,7 +158,6 @@ namespace Testing
             block.Mine(this.difficulty);
             Chain.Add(block);
 
-            //AddChainRecordsToDatabase(block);
         }
 
         public void GenesisBlock()
@@ -226,7 +207,7 @@ namespace Testing
             BlockChain testChain = new BlockChain();
             testChain.CreateTransaction(new Transaction("Matt", "Tam", 10));
             testChain.ProcessPendingTransactions("Bill");
-            /*testChain.AddBlockToChain(new Block(DateTime.Now, null, "{sender:tam , receiver:matt, amount:10 , gas:2000}"));*/
+   
             testChain.CreateTransaction(new Transaction("Rob", "Bob", 20));
             testChain.CreateTransaction(new Transaction("Bob", "Rob", 30));
             testChain.ProcessPendingTransactions("Bill");
@@ -243,13 +224,6 @@ namespace Testing
             Console.WriteLine(JsonConvert.SerializeObject(testChain, Formatting.Indented));
             Console.ResetColor();
             Console.WriteLine($"Is Chain Valid : {testChain.isValid()}");
-
-            /*Console.WriteLine($"Update Check");  
-            testChain.Chain[1].Data = "{sender:matt,receiver:tam,amount:50 , gas:3000}";
-
-            Console.WriteLine($"Is Chain Valid : {testChain.isValid()}");
-                   
-            Console.WriteLine($"Is Chain Valid : {testChain.isValid()}");*/
 
             testChain.GenesisBlock();
             Console.WriteLine("Number of Blocks: " + testChain.NumberOfBlocksInChain());
