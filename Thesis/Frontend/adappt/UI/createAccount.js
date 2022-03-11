@@ -28,25 +28,9 @@ let serverPubKey = Uint8Array.from([
 ])
 
 let axiosObj = axios.create({
-    //baseURL: 'http://172.20.10.7:3000'
-    //baseURL : 'http://192.168.128.67:3000'
+    
     baseURL : 'http://' + Urls.baseUrl
 });
-
-/*var axiosConfig = {
-    headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-        // "Access-Control-Allow-Origin": "*",
-        'Accept': '*',
-    }
-};
-
-axiosObj.post('http://did.compliance.monster:3000/user/createAccount', {email: "john.doe@email.com", password:"H0ly$hit"}, axiosConfig).then(async function (response){
-    console.log("Response:", response.status)
-}).catch(error => {
-    console.log("Error:", error.message)
-})*/
-
 
 function CreateAccount({ addTicket }) {
     const [username, setEmail] = useState('');
