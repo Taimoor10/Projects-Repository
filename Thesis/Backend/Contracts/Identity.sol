@@ -235,10 +235,7 @@ contract Identity is ERC725, ERC735, User
     function addPreRequistesClaim(bytes32 _claimId, bytes32 _preReqId) public claimSignerOnly returns(bytes32[] memory preReqIds)
     {
         require(claims[_claimId].claimType != 0 && claims[_preReqId].claimType != 0, "Claim does not exist");
-        // if(claimHasPreRequisites[_claimId]==true)
-        // {
-        //     require(preRequisiteAdded[_preReqId] != true, "Pre Req Already Added");
-        // }
+        
         claimPreRequisites[_claimId].push(_preReqId);
         claimHasPreRequisites[_claimId] = true;
         preRequisiteAdded[_preReqId] = true;
