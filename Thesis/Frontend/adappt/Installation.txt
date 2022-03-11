@@ -5,12 +5,6 @@ front-end application on iOS device
 
 /Note: The configuration is only for iOS device. Testing for Android device was not performed
 
-In case of any questions or queries. contact me at:
-   => Email: "muhammad.taimoor@informatik.hs-fulda.de",
-   => Phone_No: (+49) 177 4035681
-\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-
-
 Steps for Installation and Configuration:
 =================================================================================================================================
 // 1) Node and Expo-CLI installation
