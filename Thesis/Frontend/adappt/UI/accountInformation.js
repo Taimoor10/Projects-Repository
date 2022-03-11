@@ -195,10 +195,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-// const mapActionToProps = (dispatch) => {
-//     return{
-//         savePersonalInfo : (accountInfo) => dispatch(savePersonalInfo(accountInfo))
-//     }
-// }
-
 export default connect(mapStateToProps, null)(accountInformation);
