@@ -21,7 +21,7 @@ module.exports = async({contract}) => {
         },
 
         decreaseAllowance: async(spender, decreasedValue) => {
-            let decreaseAllowanceReceipt = await contract.decreaseAllowance(spender. decreasedValue)
+            let decreaseAllowanceReceipt = await contract.decreaseAllowance(spender, decreasedValue)
             return decreaseAllowanceReceipt
         },
 
