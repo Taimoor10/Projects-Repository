@@ -20,7 +20,7 @@ async function main() {
   console.log(`Deploying Address: ${accounts[0].address}`)
 
   const Token = await hre.ethers.getContractFactory("Token");
-  const token = await Token.deploy();
+  const token = await Token.deploy(1000000);
   await token.deployed();
 
   console.log(`Token Contract Address : ${token.address}`);

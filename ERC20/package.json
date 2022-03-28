@@ -1,8 +1,6 @@
 {
   "name": "hardhat-project",
-  "scripts": {
-
-  },
+  "scripts": {},
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.5",
     "@nomiclabs/hardhat-etherscan": "^3.0.3",
@@ -26,6 +24,8 @@
     "solidity-coverage": "^0.7.20"
   },
   "dependencies": {
+    "sinon": "^13.0.1",
+    "sinon-chai": "^3.7.0",
     "web3": "^1.7.0"
   }
 }
