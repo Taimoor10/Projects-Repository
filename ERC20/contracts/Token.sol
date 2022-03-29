@@ -33,7 +33,7 @@ contract Token {
 
     function transfer(address _to, uint256 _amount) public noReentrant() {
         require(_to != address(0) && _amount >= 0, "Provided address or value is not valid");
-        require(balances[msg.sender] >= _amount, "Token limit exceeded");
+        require(balanceOf(msg.sender) >= _amount, "Token limit exceeded");
         balances[msg.sender] -= _amount;
         balances[_to] += _amount;
 

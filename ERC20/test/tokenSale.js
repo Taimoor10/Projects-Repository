@@ -2,7 +2,7 @@ const { expect } = require("chai");
 const { ethers } = require("hardhat");
 
 describe("TokenSale", function() {
-    let tokenContract, tokenInstance, tokenSale, token, admin, account1, account2
+    let tokenContract, tokenInstance, tokenSale, admin, account1, account2
 
     beforeEach(async () => {
         [admin, account1, account2] = await ethers.getSigners();

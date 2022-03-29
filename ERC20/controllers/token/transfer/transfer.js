@@ -4,7 +4,7 @@ const ethers = require('../../../utils/ether').ethers
 
 module.exports = async ({address, amount}) => {
     const signers = await ethers.getSigners()
-    const contract = new ethers.Contract(tokenContract.address, tokenContract.abi, signers[1])
+    const contract = new ethers.Contract(tokenContract.address, tokenContract.abi, signers[0])
     const tokenFunctions = await token({contract})
     
     try{
